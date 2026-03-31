@@ -70,7 +70,7 @@ export default function Home() {
           show ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex items-start gap-12 font-mono text-[13px] leading-relaxed">
+        <div className="flex items-center gap-12 font-mono text-[13px] leading-relaxed">
           <div className="shrink-0 w-[280px]">
             <Image
               src={device.image}
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="min-w-0 pt-2">
             <div className="text-accent font-bold">{title}</div>
-            <div className="text-muted mb-1">{"-".repeat(title.length)}</div>
+            <div className="border-b border-muted mb-1" />
             {fields.map(([label, value]) => (
               <InfoLine key={label} label={label} value={value} />
             ))}

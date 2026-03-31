@@ -13,7 +13,7 @@ export function getDevice(hostModel: string): DeviceInfo {
 
   // Mac mini (must be before MacBook Pro 16" to avoid "mac16,1" matching "mac16,10")
   if (h.includes("macmini") || h.includes("mac mini") || h.includes("mac16,10") || h.includes("mac16,11")) {
-    return { image: "/devices/mac-mini.jpg", label: "Mac mini" };
+    return { image: "/devices/mac-mini.png", label: "Mac mini" };
   }
 
   // MacBook Pro 16"
