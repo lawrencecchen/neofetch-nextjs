@@ -11,6 +11,11 @@ export function getDevice(hostModel: string): DeviceInfo {
     return { image: "/devices/macbook-neo.jpg", label: "MacBook Neo" };
   }
 
+  // Mac mini (must be before MacBook Pro 16" to avoid "mac16,1" matching "mac16,10")
+  if (h.includes("macmini") || h.includes("mac mini") || h.includes("mac16,10") || h.includes("mac16,11")) {
+    return { image: "/devices/mac-mini.jpg", label: "Mac mini" };
+  }
+
   // MacBook Pro 16"
   if (
     h.includes("macbookpro18") || // M1 Pro/Max 16"
@@ -38,11 +43,6 @@ export function getDevice(hostModel: string): DeviceInfo {
   // MacBook Air 13" / generic
   if (h.includes("macbookair") || h.includes("macbook air")) {
     return { image: "/devices/macbook-air-13.jpg", label: 'MacBook Air 13"' };
-  }
-
-  // Mac mini
-  if (h.includes("macmini") || h.includes("mac mini") || h.includes("mac16,10") || h.includes("mac16,11")) {
-    return { image: "/devices/mac-mini.jpg", label: "Mac mini" };
   }
 
   // Mac Studio
