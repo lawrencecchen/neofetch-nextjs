@@ -46,7 +46,7 @@ export default function Home() {
     return <div className="min-h-screen" />;
   }
 
-  const device = getDevice(info.host);
+  const device = getDevice("macmini");
   const title = `${info.user}@${info.hostname}`;
 
   const fields: [string, string][] = [
