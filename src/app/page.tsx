@@ -77,6 +77,7 @@ export default function Home() {
               alt={device.label}
               width={280}
               height={280}
+              style={{ height: "auto" }}
               className="object-contain"
               priority
               onLoad={() => setShow(true)}
