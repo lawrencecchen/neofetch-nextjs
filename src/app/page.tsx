@@ -71,14 +71,12 @@ export default function Home() {
         }`}
       >
         <div className="flex items-center gap-12 font-mono text-[13px] leading-relaxed">
-          <div className="shrink-0 w-[280px]">
+          <div className="relative shrink-0 w-[280px] h-[280px]">
             <Image
               src={device.image}
               alt={device.label}
-              width={280}
-              height={280}
-              style={{ height: "auto" }}
-              className="object-contain w-full"
+              fill
+              className="object-contain"
               priority
               onLoad={() => setShow(true)}
             />
