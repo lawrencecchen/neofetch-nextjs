@@ -76,6 +76,7 @@ export default function Home() {
               src={device.image}
               alt={device.label}
               fill
+              sizes="280px"
               className="object-contain"
               priority
               onLoad={() => setShow(true)}
